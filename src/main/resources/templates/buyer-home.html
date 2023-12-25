@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Buyer Home Page</title>
+  <title>Grid Example</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr; /* One column */
+            gap: 20px; /* Gap between items */
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .view-button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2>Site Listing</h2>
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="../Image1.jpg" alt="Image 1" align="left" width="200"
+         height="500">
+    <h3>AMB Mall</h3>
+    <p>4 boards near to the mall entrance which are easily discoverable by every mall entrant.
+      Fertile Space for any sort of Advertisement</p>
+    <a th:href="@{/viewDetails1}" class="btn btn-info btn-sm" align="center">
+      ViewDetails
+    </a>
+  </div>
+  <div class="grid-item">
+    <img src="../Image2.jpg" alt="Image 2" align="left" width="200"
+         height="200">
+    <h3>Inorbit Mall</h3>
+    <p>2 boards at the main the entrance catching the eye of every consumer entering the mall.
+      High visibility. High Conversion.</p>
+    <a th:href="@{/viewDetails2}" class="btn btn-info btn-sm" align="center">
+      ViewDetails
+    </a>
+  </div>
+</div>
+<br>
+<a th:href="@{/}">Back to Home Page</a>
+</body>
+</html>
